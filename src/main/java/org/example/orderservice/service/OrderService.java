@@ -32,7 +32,7 @@ public class OrderService {
         return repository.save(order);
     }
 
-    @Cacheable(value = "orders", key = "#id")
+    //@Cacheable(value = "orders", key = "#id")
     public Order getOrder(UUID id) {
         System.out.println("Fetching order from DB: " + id); // <- log
         return repository.findById(id)
